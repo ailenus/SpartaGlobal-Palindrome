@@ -31,7 +31,7 @@ public class App {
             System.out.print("Choice: ");
             try {
                 choice = Integer.parseInt(bufferedReader.readLine());
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException exception) {
                 System.out.println("Please enter 1, 2, or 3.");
                 continue;
             }

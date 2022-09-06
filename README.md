@@ -21,4 +21,4 @@ reverse the string and then compare it to the original string.
 The third class, `PalindromeChecker3`, uses recursion.
 
 All three classes implement the `PalindromeCheckable` interface, which contains
-an abstract method `isPalindrome`.
+an abstract method `isPalindrome(java.lang.String)`.
