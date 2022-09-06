@@ -9,6 +9,16 @@ public class PalindromeChecker3 implements PalindromeCheckable {
     }
 
     private boolean isPalindromeHelper(String string) {
-        return isPalindromeHelper(string.substring(1, string.length() - 1));
+        if (string.matches(".?")) {
+            return true;
+        } else {
+            int stringLength = string.length();
+            if (string.charAt(0) != string.charAt(stringLength - 1)) {
+                return false;
+            } else {
+                return isPalindromeHelper(string.substring(1,
+                        stringLength - 1));
+            }
+        }
     }
 }

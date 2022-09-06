@@ -5,13 +5,8 @@ public class PalindromeChecker2 implements PalindromeCheckable {
     public boolean isPalindrome(String string) {
         String processedString = string.replaceAll("\\s+",
                 "").toLowerCase();
-        int stringLength = processedString.length();
-        for (int index = 0; index < stringLength / 2; index++) {
-            if (processedString.charAt(index)
-                    != processedString.charAt(stringLength - index - 1)) {
-                return false;
-            }
-        }
-        return true;
+        String reverseProcessedString
+                = new StringBuilder(processedString).reverse().toString();
+        return processedString.equals(reverseProcessedString);
     }
 }

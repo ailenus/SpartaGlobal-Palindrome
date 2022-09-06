@@ -3,14 +3,14 @@ package com.spartaglobal;
 public class PalindromeChecker1 implements PalindromeCheckable {
     @Override
     public boolean isPalindrome(String string) {
-        int indexFirst = 0;
-        int indexLast = string.length() - 1;
-        while (indexFirst < indexLast) {
-            if (string.charAt(indexFirst) != string.charAt(indexLast)) {
+        String processedString = string.replaceAll("\\s+",
+                "").toLowerCase();
+        int stringLength = processedString.length();
+        for (int index = 0; index < stringLength / 2; index++) {
+            if (processedString.charAt(index)
+                    != processedString.charAt(stringLength - index - 1)) {
                 return false;
             }
-            indexFirst++;
-            indexLast--;
         }
         return true;
     }
