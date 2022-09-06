@@ -12,8 +12,8 @@ import java.util.List;
  *
  */
 public class App {
-    public static void main( String[] args ) throws IOException {
-        System.out.println( "Welcome to the Palindrome app." );
+    public static void main(String[] args) throws IOException {
+        System.out.println("Welcome to the Palindrome app.");
         System.out.print("Enter a text paragraph: ");
 
         BufferedReader bufferedReader = new BufferedReader(new
@@ -24,7 +24,7 @@ public class App {
                 "\\s+"));
 
         System.out.println("Which checking method would you like to use?\n"
-                + "Enter 1 for a loop, 2 for string reversal, and 3 for"
+                + "Enter 1 for a loop, 2 for string reversal, and 3 for "
                 + "recursion.");
         int choice = 0;
         while (true) {
@@ -41,6 +41,7 @@ public class App {
             }
             break;
         }
+
         List<String> palindromes = new ArrayList<>();
         if (choice == 1) {
             PalindromeCheckable palindromeChecker = new PalindromeChecker1();
@@ -64,7 +65,7 @@ public class App {
                 }
             }
         }
-        if (words.size() == 0) {
+        if (palindromes.size() == 0) {
             System.out.println("There are no palindromes in your paragraph.");
         } else {
             System.out.println("The palindromes in your paragraph are:");

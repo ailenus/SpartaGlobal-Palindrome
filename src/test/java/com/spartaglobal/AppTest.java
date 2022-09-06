@@ -8,15 +8,8 @@ import org.junit.Test;
  * Unit test for simple App.
  */
 public class AppTest {
-    private static final String PALINDROME = "Re d   iVid\n"
-            + "er    \t rE d I vI\n\r"
-            + "   DER r    E\t\n\r"
-            + "dI v     I dE    R      \t";
-    private static final String NOT_PALINDROME = "CtRTSaxsOMy     "
-                + "      ULxGAGD4b m\t"
-                + "8JZl9BHNQFxD \rz"
-                + "6At68v JqxmyZ1                 \n\rxrQYaAwe9"
-                + "oSJl fcGzWAaMKJBdpLhp3wAK jiZSF0jT \n    \tCeeUDKjsIc1Z";
+    private static final String PALINDROME = "redividerredividerredivider";
+    private static final String NOT_PALINDROME = "zixuoperwwcrqwrwnznpzyqhyka";
     /**
      * 1st true
      */
