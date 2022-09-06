@@ -3,8 +3,8 @@ package com.spartaglobal;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -19,9 +19,9 @@ public class App {
         BufferedReader bufferedReader = new BufferedReader(new
                 InputStreamReader(System.in));
         String paragraph = bufferedReader.readLine();
-        List<String> words = new LinkedList<>(Arrays.asList(
-                paragraph.replaceAll( "[^a-zA-Z ]",
-                "").toLowerCase().split("\\s+")));
+        List<String> words = Arrays.asList(paragraph.replaceAll(
+                "[^a-zA-Z ]", "").toLowerCase().split(
+                "\\s+"));
 
         System.out.println("Which checking method would you like to use?\n"
                 + "Enter 1 for a loop, 2 for string reversal, and 3 for"
@@ -41,34 +41,35 @@ public class App {
             }
             break;
         }
+        List<String> palindromes = new ArrayList<>();
         if (choice == 1) {
             PalindromeCheckable palindromeChecker = new PalindromeChecker1();
             for (String word : words) {
-                if (!palindromeChecker.isPalindrome(word)) {
-                    words.remove(word);
+                if (palindromeChecker.isPalindrome(word)) {
+                    palindromes.add(word);
                 }
             }
         } else if (choice == 2) {
             PalindromeCheckable palindromeChecker = new PalindromeChecker2();
             for (String word : words) {
-                if (!palindromeChecker.isPalindrome(word)) {
-                    words.remove(word);
+                if (palindromeChecker.isPalindrome(word)) {
+                    palindromes.add(word);
                 }
             }
         } else if (choice == 3) {
             PalindromeCheckable palindromeChecker = new PalindromeChecker3();
             for (String word : words) {
-                if (!palindromeChecker.isPalindrome(word)) {
-                    words.remove(word);
+                if (palindromeChecker.isPalindrome(word)) {
+                    palindromes.add(word);
                 }
             }
         }
-        if (words.size == 0) {
+        if (words.size() == 0) {
             System.out.println("There are no palindromes in your paragraph.");
         } else {
             System.out.println("The palindromes in your paragraph are:");
-            for (String word : words) {
-                System.out.println(word);
+            for (String palindrome : palindromes) {
+                System.out.println(palindrome);
             }
         }
     }
