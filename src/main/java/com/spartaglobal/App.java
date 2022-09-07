@@ -44,6 +44,7 @@ public class App {
 
         List<String> palindromes = new ArrayList<>();
         if (choice == 1) {
+            // System.out.println("Using 1st class right now")
             PalindromeCheckable palindromeChecker = new PalindromeChecker1();
             for (String word : words) {
                 if (palindromeChecker.isPalindrome(word)) {
@@ -51,6 +52,7 @@ public class App {
                 }
             }
         } else if (choice == 2) {
+            // System.out.println("Using 2st class right now")
             PalindromeCheckable palindromeChecker = new PalindromeChecker2();
             for (String word : words) {
                 if (palindromeChecker.isPalindrome(word)) {
@@ -58,6 +60,7 @@ public class App {
                 }
             }
         } else if (choice == 3) {
+            // System.out.println("Using 3st class right now")
             PalindromeCheckable palindromeChecker = new PalindromeChecker3();
             for (String word : words) {
                 if (palindromeChecker.isPalindrome(word)) {
