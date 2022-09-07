@@ -19,6 +19,11 @@ public class App {
         BufferedReader bufferedReader = new BufferedReader(new
                 InputStreamReader(System.in));
         String paragraph = bufferedReader.readLine();
+        if (paragraph.equals("")) {
+            System.out.println("You did not enter any text.");
+            System.out.println("Exiting program.");
+            return;
+        }
         List<String> words = Arrays.asList(paragraph.replaceAll(
                 "[^a-zA-Z ]", "").toLowerCase().split(
                 "\\s+"));
