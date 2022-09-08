@@ -48,7 +48,7 @@ string, and returns whether the new string matches the given string.
 The method instantiates a new `java.lang.StringBuilder` object using the given
 string, then invokes the `reverse` method to reverse it, and lastly returns a
 new string using the `toString` method. It then returns whether this string
-matches the given string by invoking the `matches` method of `java.lang.String`.
+matches the given string by invoking the `equals` method of `java.lang.String`.
 
 ### `PalindromeChecker3` class
 
