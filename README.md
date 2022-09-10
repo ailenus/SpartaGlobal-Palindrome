@@ -33,9 +33,9 @@ There is a single abstract method `isPalindrome`, defined as
 This class implements the `PalindromeCheckable` interface. It implements the
 `isPalindrome` method using a simple loop.
 
-The method checkes first if the first and last character of the string matches.
+The method checks first if the first and last character of the string matches.
 If not, it returns `false` immediately. Otherwise, it enters the next iteration
-and checkes whether the second and the second to last character matches, and so
+and checks whether the second and the second to last character matches, and so
 on. The loop stops when the index reaches half of the length of the string, at
 which point the method returns `true`.
 
@@ -55,11 +55,11 @@ matches the given string by invoking the `equals` method of `java.lang.String`.
 This class implements the `PalindromeCheckable` interface. It implements the
 `isPalindrome` method by recursion.
 
-The method first checkes if the string is empty or a single character, using
-the `match` method of the `java.lang.String` class. The matching regular
-expression is `[a-z]?`, which matches any single character between `a` (index
-97) to `z` (index 122) that occurs never or once. If the string is empty or
-a single character, it returns `true`. This is the base case of the recusion.
+The method first checks if the string is empty or a single character, using the
+`match` method of the `java.lang.String` class. The matching regular expression
+is `[a-z]?`, which matches any single character between `a` (index 97) to `z`
+(index 122) that occurs never or once. If the string is empty or a single
+character, it returns `true`. This is the base case of the recursion.
 
 If the string is longer than one character, it first compares whether the first
 and the last characters thereof match. If not, it returns `false` immediately.
@@ -80,16 +80,16 @@ into a named string.
 
 A new *`java.util.List`* of type `java.lang.String` is then created, which
 stores the paragraph processed into an array of lowercase words that consist
-solely of the twenty-six letters of the alphabet; this array is converted into
-a fixed-size list using the `java.util.Arrays.asList` method.
+solely of the twenty-six letters of the alphabet; this array is converted into a
+fixed-size list using the `java.util.Arrays.asList` method.
 
 The program then prompts the user to enter either 1, 2, or 3 for each of the
 three methods of checking palindromes. A perpetual loop is used to ensure that
 the user enters only one of these three options.
 
 A new `java.util.ArrayList` is then created and used to store the confirmed
-palindromes. An `if`–`else` block is used for each of the three options. In
-each conditional branch, a new `PalindromeCheckable` object is declared and
+palindromes. An `if`–`else` block is used for each of the three options. In each
+conditional branch, a new `PalindromeCheckable` object is declared and
 instantiated according to the option chosen by the user. A loop that iterates
 over the list of words is then used to check each of the word in the list, and
 whenever a word is checked to be a palindrome, it is added to the list of
